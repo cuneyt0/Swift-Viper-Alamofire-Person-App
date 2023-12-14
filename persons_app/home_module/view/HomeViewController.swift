@@ -35,7 +35,12 @@ class HomeViewController: UIViewController {
 extension HomeViewController:PresenterToViewHomeViewProtocol{
     func vieweVeriGonder(kisilerListesi: Array<Person>) {
         self.personList = kisilerListesi
-        self.personTableView.reloadData()
+        
+        DispatchQueue.main.async {
+            self.personTableView.reloadData()
+        }
+        
+      
     }
     
     
@@ -58,7 +63,7 @@ extension HomeViewController : UITableViewDelegate,UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "personCell", for: indexPath) as! TableViewCell
         
-        cell.personInfo.text = "\(person.name!) - \(person.phoneNumber!) "
+        cell.personInfo.text = "\(person.kisi_ad!) - \(person.kisi_tel!) "
         
         return cell
     }
@@ -82,11 +87,11 @@ extension HomeViewController : UITableViewDelegate,UITableViewDataSource {
         let silAction = UIContextualAction(style: .destructive, title: "Sil"){
             (contextualAction,view,bool) in
             
-            let alert = UIAlertController(title: "Silme İşlemş", message: "\(person.name!) silinsin mi ", preferredStyle:.alert)
+            let alert = UIAlertController(title: "Silme İşlemş", message: "\(person.kisi_ad!) silinsin mi ", preferredStyle:.alert)
             
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel){ action in }
             let approveAction = UIAlertAction(title: "Yes", style: .destructive){ action in 
-                self.homeviewPresenterObject?.deleteUser(Id: person.id!)
+                self.homeviewPresenterObject?.deleteUser(Id:Int( person.kisi_id!)!)
             }
             
             alert.addAction(cancelAction)

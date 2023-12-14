@@ -6,14 +6,14 @@
 //
 
 import Foundation
-class Person {
-    var id:Int?
-    var name:String?
-    var phoneNumber:String?
+class Person : Codable  {
+    var kisi_id:String?
+    var kisi_ad:String?
+    var kisi_tel:String?
     
-    init(id: Int? = nil, name: String? = nil, phoneNumber: String? = nil) {
-        self.id = id
-        self.name = name
-        self.phoneNumber = phoneNumber
+    init(kisi_id: String? = nil, kisi_ad: String? = nil, kisi_tel: String? = nil) {
+        self.kisi_id = kisi_id
+        self.kisi_ad = kisi_ad
+        self.kisi_tel = kisi_tel
     }
 }

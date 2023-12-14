@@ -33,6 +33,7 @@
 		00A302042B1B97CC00204BE6 /* UserDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A302032B1B97CC00204BE6 /* UserDetailInteractor.swift */; };
 		00A302062B1B97F800204BE6 /* UserDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A302052B1B97F800204BE6 /* UserDetailPresenter.swift */; };
 		00F06CD02B2B43EB000BA35F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 00F06CCF2B2B43EB000BA35F /* Alamofire */; };
+		00F06CD22B2B478A000BA35F /* PersonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F06CD12B2B478A000BA35F /* PersonResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		00A302012B1B97B100204BE6 /* UserDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailRouter.swift; sourceTree = "<group>"; };
 		00A302032B1B97CC00204BE6 /* UserDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailInteractor.swift; sourceTree = "<group>"; };
 		00A302052B1B97F800204BE6 /* UserDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailPresenter.swift; sourceTree = "<group>"; };
+		00F06CD12B2B478A000BA35F /* PersonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				0064020E2B137DCB00160DF7 /* Person.swift */,
+				00F06CD12B2B478A000BA35F /* PersonResponse.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00A302042B1B97CC00204BE6 /* UserDetailInteractor.swift in Sources */,
+				00F06CD22B2B478A000BA35F /* PersonResponse.swift in Sources */,
 				00A301E92B1B930100204BE6 /* HomeviewPresenter.swift in Sources */,
 				0064020F2B137DCB00160DF7 /* Person.swift in Sources */,
 				00A301F82B1B975E00204BE6 /* AddPersonPresenter.swift in Sources */,

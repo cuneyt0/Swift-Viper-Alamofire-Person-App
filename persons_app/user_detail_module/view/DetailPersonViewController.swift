@@ -21,8 +21,8 @@ class DetailPersonViewController: UIViewController {
         UserDetailRouter.createModule(ref: self)
         
         if let user = person{
-            tfUserName.text = user.name
-            tfUserPhoneNumber.text = user.phoneNumber
+            tfUserName.text = user.kisi_ad
+            tfUserPhoneNumber.text = user.kisi_tel
             
         }
         
@@ -34,7 +34,7 @@ class DetailPersonViewController: UIViewController {
     
     @IBAction func updateButton(_ sender: Any) {
         if let ka = tfUserName.text ,let kn = tfUserPhoneNumber.text , let user = person{
-            userDetailPresenter?.updatePerson(user_id: user.id ?? 0, user_name: ka, number: kn)
+            userDetailPresenter?.updatePerson(user_id: Int(user.kisi_id!)! , user_name: ka, number: kn)
         }
         
      
